@@ -1,0 +1,14 @@
+.pointer-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  
+  .player {
+    flex: 1;
+  }
+  
+  .splitter {
+    height: 5px;
+    background: black;
+  }
+}

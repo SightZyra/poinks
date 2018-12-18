@@ -1,0 +1,36 @@
+.point-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  .points {
+    position: absolute;
+    font-size: 12rem;
+  }
+  
+  .point-manipulator{
+    flex: 1;
+    height: 100%;
+    font-size: 3rem;
+  }
+  
+  .remove-points {
+    background-color: red;
+    span {
+      margin-right: 70px;
+    }
+  }
+  
+  .add-points {
+    background-color: green;
+    span {
+      margin-left: 70px;
+    }
+  }
+}
+
+.upsidedown-true {
+  transform: rotate(180deg);
+}
