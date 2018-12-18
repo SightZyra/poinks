@@ -1,9 +1,9 @@
 <div class="point-container upsidedown-{{upsidedown}}">
-  <div class="points">{{pointCounter}}</div>
-  <button class="remove-points point-manipulator">
+  <div class="points">{{pointCounts}}</div>
+  <button class="remove-points point-manipulator" (tap)="minusCount($event)">
     <span class="fa fa-minus"></span>
   </button>
-  <button class="add-points point-manipulator">
+  <button class="add-points point-manipulator" (tap)="plusCount($event)">
     <span class="fa fa-plus"></span>
   </button>
 </div>

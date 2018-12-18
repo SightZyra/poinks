@@ -8,23 +8,29 @@
   .points {
     position: absolute;
     font-size: 12rem;
+    z-index: -1;
   }
   
   .point-manipulator{
     flex: 1;
     height: 100%;
     font-size: 3rem;
+  
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: inherit;
   }
   
   .remove-points {
-    background-color: red;
     span {
       margin-right: 70px;
     }
   }
   
   .add-points {
-    background-color: green;
     span {
       margin-left: 70px;
     }

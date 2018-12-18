@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {PointCounterService} from './point-counter.service';
 
 @Component({
   selector: 'app-point',
@@ -7,11 +8,19 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class PointComponent implements OnInit {
   @Input() upsidedown = false;
-  public pointCounter = 50;
+  public pointCounts = 50;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
 
+  public minusCount(event) {
+    this.pointCounts --;
+  }
+
+  public plusCount(event) {
+    this.pointCounts ++;
+  }
 }
