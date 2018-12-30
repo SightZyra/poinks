@@ -1,6 +1,32 @@
+$font-color: white;
+$background-color: black;
+$menu-color: gray;
+
 html, body {
   height: 100%;
   padding: 0;
   margin: 0;
   font-family: Arial;
+  color: $font-color;
+}
+
+.pointer-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  
+  .player {
+    flex: 1;
+    background-color: $background-color;
+  }
+  
+  .splitter {
+    height: auto;
+    padding: 10px 0 10px 0;
+    background: $menu-color;
+  }
+}
+
+.upsidedown-true {
+  transform: rotate(180deg);
 }

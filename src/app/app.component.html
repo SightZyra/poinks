@@ -1,10 +1,7 @@
 <div class="pointer-container">
-  <div class="player">
-    <app-point [upsidedown]="true"></app-point>
+  <div class="splitter">
+    <app-menu></app-menu>
   </div>
-  <div class="splitter">&nbsp;</div>
-  <div class="player">
-    <app-point></app-point>
-  </div>
+  <router-outlet></router-outlet>
 </div>
 

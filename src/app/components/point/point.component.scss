@@ -8,7 +8,6 @@
   .points {
     position: absolute;
     font-size: 12rem;
-    z-index: -1;
   }
   
   .point-manipulator{
@@ -35,8 +34,4 @@
       margin-left: 70px;
     }
   }
-}
-
-.upsidedown-true {
-  transform: rotate(180deg);
 }
