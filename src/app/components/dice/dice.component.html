@@ -1,15 +1,57 @@
-<div class="dice-container" (tap)="toggleDice()">
-  <div class="scene">
-    <div *ngIf="!rotateDice" class="cube">
-      <img src="../../../assets/icons/dice/dice-{{diceNumber}}.svg">
-    </div>
-    <div *ngIf="rotateDice" class="cube roll-the-dice">
-      <div class="cube-face  cube-face-front"></div>
-      <div class="cube-face  cube-face-back"></div>
-      <div class="cube-face  cube-face-left"></div>
-      <div class="cube-face  cube-face-right"></div>
-      <div class="cube-face  cube-face-top"></div>
-      <div class="cube-face  cube-face-bottom"></div>
+<div class="dice-container">
+  <div class="dice-perspective">
+    <div class="dice" (tap)="rotateDice()">
+
+      <div class="cube front">
+        <div class="one">
+          <div class="dot">&nbsp;</div>
+        </div>
+      </div>
+
+      <div class="cube top">
+        <div class="diagonal">
+          <div class="dot">&nbsp;</div>
+          <div class="dot">&nbsp;</div>
+        </div>
+      </div>
+
+      <div class="cube left">
+        <div class="diagonal">
+          <div class="dot">&nbsp;</div>
+          <div class="dot">&nbsp;</div>
+          <div class="dot">&nbsp;</div>
+        </div>
+      </div>
+
+      <div class="cube right">
+        <div class="four">
+          <div class="dot">&nbsp;</div>
+          <div class="dot">&nbsp;</div>
+          <div class="dot">&nbsp;</div>
+          <div class="dot">&nbsp;</div>
+        </div>
+      </div>
+
+      <div class="cube bottom">
+        <div class="five">
+          <div class="dot">&nbsp;</div>
+          <div class="dot">&nbsp;</div>
+          <div class="dot">&nbsp;</div>
+          <div class="dot">&nbsp;</div>
+          <div class="dot">&nbsp;</div>
+        </div>
+      </div>
+
+      <div class="cube back">
+        <div class="six">
+          <div class="dot">&nbsp;</div>
+          <div class="dot">&nbsp;</div>
+          <div class="dot">&nbsp;</div>
+          <div class="dot">&nbsp;</div>
+          <div class="dot">&nbsp;</div>
+          <div class="dot">&nbsp;</div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
