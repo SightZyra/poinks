@@ -1,10 +1,10 @@
 <div class="menu-container">
   <ng-container *ngIf="!showHome()">
-    <div class="reset fa fa-refresh" (click)="pointsService.resetPoints()"></div>
-    <img src="../../../assets/icons/dice/dice-random.svg" class="svg-icons " (click)="whoWillStart()">
-    <div class="reset fa fa-users" (click)="pointsService.resetPoints()"></div>
+    <div class="menu-item fa fa-refresh" (click)="pointsService.resetPoints()"></div>
+    <div class="menu-item poinks-rolling-dices" (click)="whoWillStart()"></div>
+    <div class="menu-item fa fa-users" (click)="pointsService.resetPoints()"></div>
   </ng-container>
   <ng-container *ngIf="showHome()">
-    <img src="../../../assets/icons/boar-tusks.svg" class="svg-icons " (click)="points()">
+    <div class="menu-item poinks-boar-tusks" (click)="points()"></div>
   </ng-container>
 </div>
