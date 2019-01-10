@@ -47,3 +47,17 @@ $fa-line-height-base: 1 !default;
 .poinks-poinks:before {
   content: "\1f417";
 }
+.poinks-endboss:before,
+.poinks-deamon:before,
+.poinks-boss:before {
+  content: "\e900";
+}
+.poinks-player3:before {
+  content: "\e901";
+}
+.poinks-player4:before {
+  content: "\e903";
+}
+.poinks-player2:before {
+  content: "\e904";
+}
