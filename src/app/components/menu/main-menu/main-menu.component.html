@@ -1,13 +1,19 @@
 <div class="menu-container">
     <div class="menu-item fa fa-refresh" (click)="pointsService.resetPoints()"></div>
+
     <div class="menu-item poinks-rolling-dices"
          [routerLink]="['/', { outlets: {primary: ['whoWillStart'], menu: ['whoWillStartMenu'] }}]"
     ></div>
-    <div class="splitter-button" (click)="toggleMenu()">S</div>
+
+  <!--TODO: move to own component!!!-->
+    <div class="splitter-button poinks-poinks" (click)="toggleMenu()"></div>
+    <div class="menu-item">&nbsp;</div>
+
     <div class="menu-item fa fa-users" (click)="pointsService.resetPoints()"
         [routerLink]="[ '/', { outlets: { menu: ['playerMenu']}}]"
     ></div>
-    <div class="menu-item fa fa-users" (click)="pointsService.resetPoints()"
-         [routerLink]="[ '/', { outlets: { menu: ['playerMenu']}}]"
+
+    <div class="menu-item fa fa-cog"
+         [routerLink]="[ '/', { outlets: { menu: ['settings']}}]"
     ></div>
 </div>

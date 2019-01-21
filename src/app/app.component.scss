@@ -1,9 +1,5 @@
 @import "../styles/variables";
 
-$splitter-button-height: 50px;
-$splitter-height-open: 40px;
-$splitter-height-closed: 2px;
-
 @mixin hide-menu() {
   height: $splitter-height-closed;
   top: calc(50% + (#{$splitter-height-open} / 2));

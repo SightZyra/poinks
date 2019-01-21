@@ -16,10 +16,6 @@ export class MainMenuComponent implements OnInit, AfterViewInit {
   ngOnInit() {
   }
 
-  public whoWillStart() {
-    // this.router.navigate(['/whoWillStart']);
-  }
-
   public toggleMenu() {
     this.showMenu = !this.showMenu;
     this.showMenu ? this.addClass() : this.removeClass();
