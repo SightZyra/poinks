@@ -1,37 +1,51 @@
+/deep/ app-point {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
 .point-container {
+  position: relative;
+  flex: 1;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 100%;
 
-  .points {
+  .point-viewer{
     position: absolute;
-    font-size: 12rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    
+    .remove-points, .add-points{
+      font-size: 13vw;
+      writing-mode: initial;
+      flex: 1;
+    }
+  
+    .points {
+      font-size: 40vw;
+      flex: 2;
+    }
+    
+    span{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
   
   .point-manipulator{
     flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100%;
-    font-size: 3rem;
-  
-    background: none;
-    color: inherit;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    outline: inherit;
+    width: 100%;
+    z-index: 1;
   }
   
-  .remove-points {
-    span {
-      margin-right: 70px;
-    }
-  }
-  
-  .add-points {
-    span {
-      margin-left: 70px;
-    }
-  }
 }

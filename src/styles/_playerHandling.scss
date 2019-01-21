@@ -1,0 +1,63 @@
+@import "./variables";
+
+.upsidedown-true {
+  transform: rotate(180deg);
+}
+
+.pointer-container {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  
+  // splitter-space-saver
+  // - space saving for real splitter
+  .splitter-space-saver {
+    height: auto;
+    background: red;
+  }
+  
+  .player {
+    background-color: $background-color;
+  
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 21%;
+    min-width: 50%;
+  }
+  
+  &.player-count-2{
+    .player:first-child {
+      @extend .rotate-upside-down;
+    }
+  }
+  
+  &.player-count-3 {
+    .player:nth-child(1){
+      @extend .rotate-right;
+    }
+    .player:nth-child(2) {
+      @extend .rotate-left;
+    }
+  }
+  
+  &.player-count-4{
+    .player:nth-child(1),.player:nth-child(3)   {
+      @extend .rotate-left;
+    }
+    .player:nth-child(2),.player:nth-child(4)  {
+      @extend .rotate-right;
+    }
+  }
+}
+
+.rotate-upside-down, .upsidedown-true {
+  transform: rotate(180deg);
+}
+.rotate-right {
+  writing-mode: vertical-rl;
+}
+.rotate-left {
+  writing-mode: vertical-rl;
+  transform: rotate(-180deg);
+}

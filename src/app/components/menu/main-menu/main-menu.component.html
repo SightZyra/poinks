@@ -3,7 +3,11 @@
     <div class="menu-item poinks-rolling-dices"
          [routerLink]="['/', { outlets: {primary: ['whoWillStart'], menu: ['whoWillStartMenu'] }}]"
     ></div>
+    <div class="splitter-button" (click)="toggleMenu()">S</div>
     <div class="menu-item fa fa-users" (click)="pointsService.resetPoints()"
         [routerLink]="[ '/', { outlets: { menu: ['playerMenu']}}]"
+    ></div>
+    <div class="menu-item fa fa-users" (click)="pointsService.resetPoints()"
+         [routerLink]="[ '/', { outlets: { menu: ['playerMenu']}}]"
     ></div>
 </div>

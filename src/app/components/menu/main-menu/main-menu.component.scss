@@ -1,0 +1,37 @@
+$splitter-button-height: 50px;
+$splitter-height-open: 40px;
+$splitter-height-closed: 2px;
+
+.menu-container {
+  transition: visibility 0s;
+  
+  .menu-item {
+    visibility: hidden;
+  }
+  
+  .splitter-button {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    
+    border-radius: 50%;
+    background-color: darkolivegreen;
+    height: $splitter-button-height;
+    width: $splitter-button-height;
+    cursor: pointer;
+  }
+}
+
+:host-context(.hide-menu) {
+  .menu-item {
+    visibility: hidden;
+    transition-delay: 700ms;
+  }
+}
+
+:host-context(.show-menu) {
+  .menu-item {
+    visibility: unset;
+  }
+}

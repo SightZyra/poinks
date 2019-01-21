@@ -1,5 +1,6 @@
 @import "variables";
 @import "menu";
+@import "playerHandling";
 @import "../assets/fonts/poinksFont/poinksFont";
 
 html, body {
@@ -8,24 +9,4 @@ html, body {
   margin: 0;
   font-family: Arial;
   color: $font-color;
-}
-
-.pointer-container {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  
-  .player {
-    flex: 1;
-    background-color: $background-color;
-  }
-  
-  .splitter {
-    height: auto;
-    background: $menu-color;
-  }
-}
-
-.upsidedown-true {
-  transform: rotate(180deg);
 }

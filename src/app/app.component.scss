@@ -1,11 +1,38 @@
-.pointer-container {
+@import "../styles/variables";
+
+$splitter-button-height: 50px;
+$splitter-height-open: 40px;
+$splitter-height-closed: 2px;
+
+@mixin hide-menu() {
+  height: $splitter-height-closed;
+  top: calc(50% + (#{$splitter-height-open} / 2));
+}
+
+@mixin show-menu {
+  height: $splitter-height-open;
+  top: calc(50% + (#{$splitter-height-closed} / 2));
+}
+
+.app-container {
   height: 100%;
   position: relative;
   
+  // splitter-routing-outlet
+  // - menu-with-logic
+  // - positioning
   .splitter {
     position: absolute;
     top: 50%;
-    margin-top: -20px;
     width: 100%;
+    background: $menu-color;
+    z-index: 2;
+    transition: height 1s, top 1s;
+    
+    @include hide-menu();
+  
+    &.show-menu {
+      @include show-menu();
+    }
   }
 }

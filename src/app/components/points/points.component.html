@@ -1,11 +1,7 @@
-<div class="pointer-container">
-  <div class="player">
-    <app-point [upsidedown]="true"></app-point>
-  </div>
-  <div class="splitter">
-    &nbsp;
-  </div>
-  <div class="player">
-    <app-point></app-point>
-  </div>
+<div class="pointer-container player-count-{{playerCount}}">
+  <ng-container *ngFor="let playerItem of playerCountAsArray">
+    <div class="player player{{playerItem}}">
+      <app-point></app-point>
+    </div>
+  </ng-container>
 </div>

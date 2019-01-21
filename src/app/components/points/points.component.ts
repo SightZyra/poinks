@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-points',
@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./points.component.scss']
 })
 export class PointsComponent implements OnInit {
+  public playerCountAsArray: number[] = [];
+  public playerCount = 3;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
+    this.playerCountAsArray = Array(this.playerCount).fill(1).map((x, i) => i + 1);
   }
 
 }
