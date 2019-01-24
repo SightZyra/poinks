@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {PointsService} from '../../points/points.service';
 
 @Component({
   selector: 'app-player-menu',
@@ -7,12 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlayerMenuComponent implements OnInit {
 
-  constructor() { }
+  constructor(private pointsService: PointsService) {
+  }
 
   ngOnInit() {
   }
 
   public changeLayout(layout: number) {
-    console.log('layout-change', layout);
+    this.pointsService.changePlayerCount(layout);
   }
 }

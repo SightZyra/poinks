@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {PointsService} from './points.service';
 
 @Component({
   selector: 'app-points',
@@ -7,13 +8,20 @@ import {Component, OnInit} from '@angular/core';
 })
 export class PointsComponent implements OnInit {
   public playerCountAsArray: number[] = [];
-  public playerCount = 3;
+  public playerCount: number;
 
-  constructor() {
+  constructor(private pointsService: PointsService) {
   }
 
   ngOnInit() {
-    this.playerCountAsArray = Array(this.playerCount).fill(1).map((x, i) => i + 1);
+    this.pointsService.changePlayerCountSubject
+      .subscribe(count => {
+        this.playerCount = count;
+        this.createPlayerArray();
+      });
   }
 
+  private createPlayerArray() {
+    this.playerCountAsArray = Array(this.playerCount).fill(1).map((x, i) => i + 1);
+  }
 }
