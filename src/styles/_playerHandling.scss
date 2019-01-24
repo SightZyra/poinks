@@ -27,6 +27,9 @@
   }
   
   &.player-count-2{
+    .player {
+      flex: 1 0 51%;
+    }
     .player:first-child {
       @extend .rotate-upside-down;
     }
@@ -43,10 +46,10 @@
   
   &.player-count-4{
     .player:nth-child(1),.player:nth-child(3)   {
-      @extend .rotate-left;
+      @extend .rotate-right;
     }
     .player:nth-child(2),.player:nth-child(4)  {
-      @extend .rotate-right;
+      @extend .rotate-left;
     }
   }
 }
